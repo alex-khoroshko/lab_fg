@@ -3,7 +3,7 @@ from multiprocessing import Process
 import ipc
 import os
 import math
-
+import pprint
 
 port = 30000
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -42,4 +42,4 @@ while True:
 			 'y-accel':         q['y-accel'],
 			 'z-accel':         q['z-accel'],
 			 }
-	fg_ipc.post(state)
+	pprint (state)
